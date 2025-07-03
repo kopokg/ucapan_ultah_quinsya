@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selamat Ulang Tahun, Quinsya!</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100%;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* Background video */
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -3;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -2;
+    }
+
+    .firework {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.imgur.com/V2cwh94.gif') center/cover no-repeat;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      z-index: -1;
+    }
+
+    h1 {
+      margin-top: 80px;
+      font-size: 3em;
+      text-shadow: 2px 2px 6px #ff69b4;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.3em;
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: center;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .foto-terbang, .kupu-pink {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 20px;
+      animation: terbangBebas 12s infinite ease-in-out;
+      opacity: 0.85;
+      z-index: 2;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    }
+
+    .kupu-pink {
+      width: 60px;
+      height: 60px;
+      border-radius: 0;
+      object-fit: contain;
+    }
+
+    @keyframes terbangBebas {
+      0%   { transform: translate(0, 0) rotate(0deg); }
+      25%  { transform: translate(30px, -40px) rotate(15deg); }
+      50%  { transform: translate(-30px, 30px) rotate(-10deg); }
+      75%  { transform: translate(40px, 10px) rotate(10deg); }
+      100% { transform: translate(-20px, -25px) rotate(-5deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Musik otomatis -->
+  <audio autoplay loop>
+    <source src="ucapan.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- Video Background -->
+  <video class="video-bg" autoplay muted loop>
+    <source src="bfb5cba95fab2acfd86ab99f09d48a62.mp4" type="video/mp4">
+    Browser kamu tidak mendukung video.
+  </video>
+
+  <div class="overlay"></div>
+  <div class="firework"></div>
+
+  <h1>Selamat Ulang Tahun, Quinsya! 🎉</h1>
+  <p>Di hari istimewa ini, aku ingin mengingatkanmu betapa berartinya kamu bagi banyak orang.  
+     Semoga setiap harimu dipenuhi dengan kebahagiaan, cinta, dan keberanian untuk mengejar mimpi.  
+     Tetaplah bersinar dan menebar senyum manismu ke dunia 🌟</p>
+
+  <!-- Foto Quinsya terbang -->
+  <img src="foto-quinsya.png" class="foto-terbang" style="top: 10%; left: 20%; animation-delay: 0s;">
+  <img src="foto-quinsya.png" class="foto-terbang" style="top: 30%; left: 70%; animation-delay: 2s;">
+  <img src="foto-quinsya.png" class="foto-terbang" style="top: 50%; left: 10%; animation-delay: 4s;">
+  <img src="foto-quinsya.png" class="foto-terbang" style="top: 70%; left: 50%; animation-delay: 6s;">
+  <img src="foto-quinsya.png" class="foto-terbang" style="top: 40%; left: 80%; animation-delay: 1s;">
+
+  <!-- Kupu-kupu pink terbang -->
+  <img src="kupu-pink.png" class="kupu-pink" style="top: 20%; left: 10%; animation-delay: 0s;">
+  <img src="kupu-pink.png" class="kupu-pink" style="top: 40%; left: 60%; animation-delay: 2s;">
+  <img src="kupu-pink.png" class="kupu-pink" style="top: 65%; left: 30%; animation-delay: 4s;">
+  <img src="kupu-pink.png" class="kupu-pink" style="top: 10%; left: 80%; animation-delay: 1s;">
+
+</body>
+</html>
